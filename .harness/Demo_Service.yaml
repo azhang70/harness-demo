@@ -1,0 +1,25 @@
+service:
+  name: Service Test
+  identifier: Service_Test
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: DemoManifest
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: account.GitHub
+                  gitFetchType: Branch
+                  paths:
+                    - deployment.yaml
+                  repoName: harness-demo
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+  gitOpsEnabled: false
+  orgIdentifier: default
+  projectIdentifier: Harness_Demo
