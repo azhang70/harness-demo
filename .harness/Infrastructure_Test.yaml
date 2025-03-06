@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: Infrastructure Test
+  identifier: Infrastructure_Test
+  orgIdentifier: default
+  projectIdentifier: Harness_Demo
+  environmentRef: Environment_Test
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: account.Kubernetes_Connector
+    namespace: harness-delegate-ng
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false
