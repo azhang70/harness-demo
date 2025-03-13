@@ -17,5 +17,6 @@ spec:
       containers:
       - image: azhang70/todo-app:demo
         name: todo-app
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
