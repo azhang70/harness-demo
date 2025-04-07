@@ -52,7 +52,7 @@ Verify in http://localhost:8080
 ```sh
 minikube start
 ```
-Monitor the Delegates and wait for them to connect</br>
+Monitor the Delegates and wait for them to connect. This may take a few minutes.</br>
 Push code to GitHub, then navigate to Harness and select 'Builds' to follow the pipeline's execution</br>
 Once successful, run the following:
 ```sh
@@ -63,6 +63,6 @@ minikube service todo-app
 ```
 
 ## Tips
-> - For the DockerHub Connector, use Username and Password as the authentication method
+> - For the DockerHub Connector, use Username and Password as the authentication method. You may need to create a new Secret (personal access token) for this to work.
 > - Make sure Docker Desktop is open before running 'minikube start'
 > - If the pipeline is hanging, there is likely an issue with the Kubernetes cluster (check Delegate connectivity)
