@@ -20,6 +20,17 @@ service:
                   branch: main
               skipResourceVersioning: false
               enableDeclarativeRollback: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: account.harnessImage
+                imagePath: azhang70/todo-app
+                tag: <+pipeline.sequenceId>
+                digest: ""
+              identifier: PipelineTag
+              type: DockerRegistry
   gitOpsEnabled: false
   orgIdentifier: default
   projectIdentifier: Harness_Demo
