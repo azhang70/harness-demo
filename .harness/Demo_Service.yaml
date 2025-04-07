@@ -44,6 +44,12 @@ service:
                 digest: ""
               identifier: PipelineTag
               type: DockerRegistry
+      variables:
+        - name: tag
+          type: String
+          description: ""
+          required: false
+          value: <+pipeline.sequenceId>
   gitOpsEnabled: false
   orgIdentifier: default
   projectIdentifier: Harness_Demo
