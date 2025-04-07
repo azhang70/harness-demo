@@ -66,3 +66,10 @@ minikube service todo-app
 > - For the DockerHub Connector, use Username and Password as the authentication method. You may need to create a new Secret (personal access token) for this to work.
 > - Make sure Docker Desktop is open before running 'minikube start'
 > - If the pipeline is hanging, there is likely an issue with the Kubernetes cluster (check Delegate connectivity)
+> - If minikube times out, allocate more resources by running
+```sh
+minikube delete
+```
+```sh
+minikube start --cpus 4 --memory 7596
+```
