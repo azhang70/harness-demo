@@ -28,7 +28,7 @@ Verify in http://localhost:8080
 
 ## CI/CD Using Harness
 > - Click on 'Continuous Integration' and create a new project
-> - Under 'Project-level Resources' click on 'Delegates' and install a Harness [Delegate](https://developer.harness.io/docs/platform/get-started/tutorials/install-delegate/#get-your-harness-account-id)
+> - Under 'Project-level Resources' click on 'Delegates' and install a [Harness Delegate](https://developer.harness.io/docs/platform/get-started/tutorials/install-delegate/#get-your-harness-account-id)
 > - In the same section, click on 'Connectors' and create new Connectors for the Kubernetes cluster, DockerHub, and GitHub
 > - Create a new pipeline with the following stages: ![image](https://github.com/user-attachments/assets/5a8d8642-093d-45d5-a80d-c4b2d969f87f)
 > - In the top right corner, click on 'Triggers' and create a new trigger using the GitHub webhook. Use the GitHub Connector and provide the GitHub repository name. Use the push event.
@@ -38,7 +38,7 @@ Verify in http://localhost:8080
 > - Select the Linux OS
 > - Select the Kubernetes connector and provide the namespace of the cluster
 > - In the 'Execution' tab, create the following steps: ![image](https://github.com/user-attachments/assets/471b2fcd-f11d-45b6-8c67-6b0668a6a8bd)
-> - In the 'Run' step, select Third-Party Artifact Registry as the Registry Type. Use the Harness Docker Connector to link the Container Registry. The remaining fields should be filled as such: ![image](https://github.com/user-attachments/assets/ab3aae98-b8ba-43fb-aed8-e57bd8898d1e)
+> - In the 'Test' step, select Third-Party Artifact Registry as the Registry Type. Use the Harness Docker Connector to link the Container Registry. The remaining fields should be filled as such: ![image](https://github.com/user-attachments/assets/ab3aae98-b8ba-43fb-aed8-e57bd8898d1e)
 > - In the 'Build and Push' step, select Third-Party Artifact Registry as the Registry Type and provide the Harness Docker Connector. Also input the docker repository name and any tags to be used.
 
 ### Deployment Configuration
