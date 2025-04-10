@@ -15,7 +15,7 @@ spec:
         app: todo-app
     spec:
       containers:
-      - image: azhang70/todo-app:<+serviceVariables.tag>
+      - image: azhang70/todo-app:{{ .Values.image.tag }}
         name: todo-app
         imagePullPolicy: Always
         ports:
