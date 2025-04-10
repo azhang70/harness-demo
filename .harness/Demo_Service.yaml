@@ -18,21 +18,10 @@ service:
                     - deployment.yaml
                   repoName: harness-demo
                   branch: main
+              valuesPaths:
+                - values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
-        - manifest:
-            identifier: values
-            type: Values
-            spec:
-              store:
-                type: Github
-                spec:
-                  connectorRef: account.GitHub
-                  gitFetchType: Branch
-                  paths:
-                    - values.yaml
-                  repoName: harness-demo
-                  branch: main
       artifacts:
         primary:
           primaryArtifactRef: <+input>
